@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    overflow-x: hidden; 
+  }
+
+  /* Header Section */
+  header {
+    background-color: white;
+    text-align: center;
+    border: 7px solid #98ca65;
+    z-index: 1000;
+  }
+
+  header img {
+    width: 17%;
+    height: auto;
+  }
+
+  /* Navigation */
+  nav {
+    background-color: rgba(55, 150, 99, 0.9);
+    padding: 17px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+
+  nav a:hover {
+    color: #34ca95;
+  }
+
+  /* Hamburger icon styling */
+#menu-icon {
+display: none;
+font-size: 30px;
+cursor: pointer;
+color: white;
+}
+
+/* Mobile nav links hidden by default */
+#nav-links {
+display: flex;
+justify-content: center;
+}
+
+/* Mobile styling: stack links vertically and hide by default */
+@media (max-width: 768px) {
+
+  header img {
+    width: 50%;
+    height: auto;
+  }
+
+#nav-links {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(55, 150, 99, 0.9);
+  width: 100%;
+  position: absolute;
+  top: 60px; /* Adjust according to your header height */
+  left: 0;
+  z-index: 1000;
+}
+
+#nav-links a {
+  display: block;
+  margin: 3px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid white;
+}
+
+#menu-icon {
+  display: block;
+  margin: 0 auto;
+}  
+}
+
+  /* Section Styling */
+  section {
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Allow absolute positioning for falling leaves */
+    z-index: 1; /* Ensure section content is above leaves */
+  }
+
+  section:nth-child(even) {
+    background-color: rgba(55, 150, 99, 0.9);
+    color: white;
+  }
+
+  section:nth-child(odd) {
+    background-color: #f4f4f4;
+    border: 7px solid #98ca65;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  /* Services Section */
+  #services ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #services ul li {
+    margin: 10px;
+    margin-left: 12%;
+    margin-right: 12%;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+    border-color: #34ca95;
+  }
+
+  #services ul li:hover {
+    background-color: white;
+    color: rgba(55, 150, 99, 0.9);
+  }
+
+  /* Gallery */
+  #gallery img {
+      width: 50%;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  #gallery video {
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  /* Ensure only one image shows at a time for mobile */
+#image-container {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+#gallery-image {
+width: 100%;
+max-width: 93.5%; /* Adjust for the available space */
+border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+#gallery img {
+  display: none; /* Hide all images */
+}
+
+#gallery #gallery-image {
+  display: block; /* Show the single image element */
+  width: 93.5%;
+}
+
+#gallery video {
+  width: 93.5%;
+}
+}
+
+@media (max-width: 768px) {
+#contact div {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  gap: 10px; /* Optional: Add space between buttons */
+}
+}
+
+
+  /* Footer */
+  footer {
+    background-color: #689735;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+footer p{
+  padding-top: 40px;
+}
+}
+
+  /* Falling Leaves */
+  .leaf {
+    position: absolute;
+    width: 50px; /* Leaf size */
+    opacity: 0.7;
+    pointer-events: none; /* Prevent interaction with leaves */
+    z-index: 0; /* Make sure leaves are behind other content */
+  }
+
+  /* Floating WhatsApp Icon Animation */
+@keyframes pop {
+0% {
+  transform: scale(1);
+}
+50% {
+  transform: scale(1.1); /* Scale up to 1.1 */
+}
+100% {
+  transform: scale(1); /* Scale back to normal */
+}
+}
+
+.whatsapp-icon {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1000;
+animation: pop 1s infinite; /* Infinite animation */
+}
+
+.whatsapp-icon img {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
