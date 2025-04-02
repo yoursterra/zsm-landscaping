@@ -9,9 +9,9 @@ function toggleMenu() {
 
   // Array of image sources for the gallery
   const galleryImages = [
-    'Images and videos/gallery1.jpeg',
-    'Images and videos/gallery2.jpeg',
-    'Images and videos/gallery3.jpeg'
+    'media/gallery1.jpeg',
+    'media/gallery2.jpeg',
+    'media/gallery3.jpeg'
   ];
 
   let currentImageIndex = 0; // Track the current image
@@ -27,16 +27,16 @@ function toggleMenu() {
 
     const leafCount = 10; // Total number of leaves
     const leafImages = [
-      'Images and videos/leaf1.png',
-      'Images and videos/leaf2.png',
-      'Images and videos/leaf3.png',
-      'Images and videos/leaf4.png',
-      'Images and videos/leaf5.png',
-      'Images and videos/leaf6.png',
-      'Images and videos/leaf7.png',
-      'Images and videos/leaf8.png',
-      'Images and videos/leaf9.png',
-      'Images and videos/leaf10.png'
+      'media/leaf1.png',
+      'media/leaf2.png',
+      'media/leaf3.png',
+      'media/leaf4.png',
+      'media/leaf5.png',
+      'media/leaf6.png',
+      'media/leaf7.png',
+      'media/leaf8.png',
+      'media/leaf9.png',
+      'media/leaf10.png'
     ];
   
     // Function to get the bottom position of the contact section
